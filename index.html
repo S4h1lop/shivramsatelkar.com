@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actor Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="hero">
+            <h1> Shivram <span> Satelkar</span></h1>
+            <p>Actor</p>
+            <p>Acting with Passion, Performing with Purpose</p>
+            <button class="button-80"  role="button" ><a href="#contact">Contact Me</a></button>
+        </div>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+          <img src="./images/photo-collage.png.png" alt="Photo 1">
+      </div>
+  </section>
+
+    <section id="about">
+        <div class="container content">
+          <h1>About Me</h1>
+          <p>Hello, and welcome to my official website!</p>
+          
+          <p>My name is Shivram Satelkar, and I’m an actor, and passionate creator dedicated to bringing authentic, compelling characters to life on screen and stage. I have had the privilege of working on a diverse range of projects that have challenged and inspired me.</p>
+          
+          <h2>My Journey</h2>
+          <p>My journey in the world of acting began from my childhood, and since then, I’ve been on an incredible ride that has taken me through various roles in film, television, theater, and beyond. From my early days performing in productions to landing significant roles each step has been a learning experience that has shaped me into the actor I am today.</p>
+          
+          <h2>My Craft</h2>
+          <p>I believe that acting is more than just a profession; it’s a calling. My approach to every role is rooted in a deep commitment to truth and authenticity. I immerse myself in the lives and experiences of the characters I portray, striving to understand and convey their stories with honesty and depth. Whether it’s a dramatic role that requires intense emotion or a light-hearted character that brings joy, I pour my heart into every performance.</p>
+          
+          <h2>Career Highlights</h2>
+          <div>
+              <p>In this image, I am seen portraying a role in a Marathi show, 'Karan Gunyala Maafi Nahi'. The scene captures my expressive performance, showcasing my ability to convey emotions and immerse myself into diverse characters. My role of Pulkit highlights my versatility and dedication as an actor in regional cinema.</p>
+          </div>
+          <div>
+              <img src="./images/IMG_5812.JPG" alt="Showcase Image">
+          </div>
+          
+          <h2>What’s Next</h2>
+          <p>I’m constantly exploring new opportunities to challenge myself as an actor and take on roles that push the boundaries of my craft. Whether it’s in front of the camera, on stage, or behind the scenes, I am excited about the future and the stories yet to be told.</p>
+          
+          <h2>Get in Touch</h2>
+          <p>If you’d like to learn more about my work, collaborate on a project, or just say hello, feel free to <a href="#contact">contact me</a>. I’d love to connect with fellow creatives, fans, and anyone who shares a love for the art of storytelling.</p>
+          
+          <p>Thank you for visiting my website, and I look forward to sharing more of my journey with you!</p>
+      
+          <p>Warm regards,<br>
+          <strong>Shivram Satelkar</strong></p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div id="form-messages"></div>
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="e2063738-ea75-4836-a4e9-0756e7de953a">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+          
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Your Email">
+          
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Write Content Here" required></textarea>
+          
+          <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <footer class="footer">
+        <section id="section4" class="container">
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/shivram.09?igsh=dmVmOHZzNGl6eHBo&utm_source=qr"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-google-plus"></i></a>
+            <a href="#"><i class="fab fa-linkdin"></i></a>
+          </div>
+          <div class="contact-info">
+            <p><strong>Email:</strong> shivramsatelkar9909@gmail.com </p>
+            <p><strong>Phone:</strong> +1 234 567 890</p>
+          </div>
+          <div class="footer-bottom">
+            <p>Copyright &copy;2024; <span class="designer-name">SHIVRAM. All Rights Reserved.</span></p>
+          </div>
+        </section>
+    </footer>
+
+
+
+    <script>
+      // Contact
+      document.addEventListener('DOMContentLoaded', function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const formMessages = document.getElementById('form-messages');
+
+        if (urlParams.has('success')) {
+            formMessages.innerHTML = '<p class="success-message">Your message has been sent successfully!</p>';
+        } else if (urlParams.has('error')) {
+            if (urlParams.get('error') === 'invalid') {
+                formMessages.innerHTML = '<p class="error-message">Please fill in all fields correctly.</p>';
+            } else {
+                formMessages.innerHTML = '<p class="error-message">There was an error sending your message. Please try again.</p>';
+            }
+        }
+    });
+    </script>
+
+    
+</body>
+</html>
